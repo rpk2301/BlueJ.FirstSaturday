@@ -1,7 +1,4 @@
 
-
-
-
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -121,11 +118,12 @@ public class WriteLoops {
         // statement inside the loop that checks the
         // loop index counter and if it’s greater than 51,
         // prints “Hello Zipcode” instead of the statement w = w + 1;
-            for(int i = 5; i<106; i++) {
-                if (i > 51) {
+            for(int i = 5; i<=105; i++) {
+                if (i > 51)
+                {
                     System.out.println("Hello Zipcode");
                 }// calling
-                w = w + 1;
+                else w = w + 1;
                 // each time through the inner loop
             }
         return w;
@@ -176,23 +174,21 @@ public class WriteLoops {
     // is less than “highestScore” and if it is, adds “currentScore” to
     // "runningScore"
     // and then sets “currentScore” to “gameNextScore()”
-    public int checkGameScore() {
+    public boolean checkGameScore() {
         int w = 0;
         int highestScore = 236;
         int currentScore = gameNextScore();
         int runningScore = 0;
 
         // do your while loop here
-            while(runningScore<highestScore)
+           while(runningScore<highestScore)
             {
                 runningScore+=currentScore;
                 w = w + 1;
             }
-            // calling
-
+            //calling
             // each time through the inner loop
-        
-        return w; // >= 3;
+        return (w >= 3);
     }
 
     // Rewrite the previous WHILE loop as a DO..WHILE loop.
@@ -209,12 +205,12 @@ public class WriteLoops {
                 runningScore+=currentScore;
                 w = w + 1;
             }
-                    while (runningScore<highestScore);
+            while (runningScore<highestScore);
             // calling
 
             // each time through the inner loop
 
-        return w >= 3;
+        return w>=3;
     }
 
     // Write a WHILE loop that checks “serverIsRunning()” and if true
